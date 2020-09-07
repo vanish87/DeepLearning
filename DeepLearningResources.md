@@ -141,7 +141,7 @@ conda install tensorflow-gpu=2.1.0
 
 ## VGG Model
 
-<img src="img/vgg16.png" style="zoom:30%;" />
+![](img/vgg16.png)
 
 - Build-in Loss: https://keras.io/api/losses/
 - Build-in Optimizers: https://keras.io/api/optimizers/
@@ -162,11 +162,7 @@ conda install tensorflow-gpu=2.1.0
 
   - Convolution
 
-    Kernel Size: 3x3
-
-    $\begin{bmatrix}1&0&1\\0&1&0\\1&0&1\end{bmatrix}$
-
-    ![](img/conv.gif)
+    Kernel Size: 3x3![](img/conv.gif)
 
     
 
@@ -271,8 +267,11 @@ conda install tensorflow-gpu=2.1.0
 
   - https://www.cc.gatech.edu/~san37/post/dlhc-cnn/
   - https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks?hl=id
+  - https://www.pyimagesearch.com/2018/12/31/keras-conv2d-and-convolutional-layers/
 
 ## GAN
+
+[GAN](GAN.md)
 
 ## Pix2Pix
 
