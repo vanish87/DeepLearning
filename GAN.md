@@ -9,6 +9,8 @@
 
 ## GAN with simple MLP
 
+- Code: gan/gan.ipynb
+
 - MLP: Multilayer Perceptron=>KerasのDense Layer
 
   ![](img/gan/mlp.jpeg)
@@ -130,14 +132,77 @@
       g_loss = combined.train_on_batch(noise, valid)
   ```
 
+  ![](img/gan/gan.gif)
   
 
 ##DCGAN 
 
-- DCGAN = GAN+Deep Convolutional
-- DiscriminatorとGeneratorにDCを導入する
+- Code: gan/dcgan.ipynb
+
+- DCGAN = GAN+DC(Deep Convolutional)
+
+- 他の部分が同じですので、DiscriminatorとGeneratorにDCを導入する
+
 - Generator
+
+  ```python
+  def GANGenerator():
+      inputDim = 100
+      outputDim = (28,28,1)
+      
+      model = Sequential()
+      model.add(Input(shape=inputDim), )
+      model.add(Dense(1024))
+      model.add(Activation('tanh'))
+  
+      model.add(Dense(128*7*7))
+      model.add(BatchNormalization())
+      model.add(Activation('tanh'))
+  
+      model.add(Reshape((7, 7, 128)))
+  
+      model.add(Conv2DTranspose(64, kernel_size=(5, 5), strides=(2, 2), padding='same'))
+      model.add(Activation('tanh'))
+  
+      model.add(Conv2DTranspose(1, kernel_size=(5, 5), strides=(2, 2), padding='same'))
+      model.add(Activation('tanh'))
+      assert model.output_shape == (None, 28, 28, 1)
+  
+      #model.summary()
+  
+      return model
+  ```
+
 - Discriminator
+
+  ```python
+  def GANDiscriminator():
+      model = Sequential()
+          
+      imgDim = (28,28,1)
+      
+      model.add(Input(shape=imgDim), )
+      model.add(Conv2D(64, (5, 5),padding='same',))
+      model.add(Activation('tanh'))
+      model.add(MaxPooling2D(pool_size=(2, 2)))
+      
+      model.add(Conv2D(128, (5, 5)))
+      model.add(Activation('tanh'))
+      model.add(MaxPooling2D(pool_size=(2, 2)))
+      
+      model.add(Flatten())
+      model.add(Dense(1024))
+      model.add(Activation('tanh'))
+      
+      model.add(Dense(1))
+      model.add(Activation('sigmoid')) 
+      
+      #model.summary()
+      
+      return model
+  ```
+
+  ![](img/gan/dcgan.gif)
 
 ## Reference
 
