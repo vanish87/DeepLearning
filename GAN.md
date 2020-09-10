@@ -135,7 +135,7 @@
   ![](img/gan/gan.gif)
   
 
-##DCGAN 
+## DCGAN 
 
 - Code: gan/dcgan.ipynb
 
