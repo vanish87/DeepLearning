@@ -12,9 +12,9 @@
 
   2. Open Anaconda Command Line/GUI
 
-     ![](C:/Users/liyuan/Documents/Personal/DeepLearning/img/anaconda-gui.png)
+     ![](img/anaconda-gui.png)
 
-     ![](C:/Users/liyuan/Documents/Personal/DeepLearning/img/anaconda.png)
+     ![](img/anaconda.png)
 
   3. Create New Env
 
@@ -37,7 +37,7 @@
 
 - Web-based
 
-  ![](C:/Users/liyuan/Documents/Personal/DeepLearning/img/jupyter.png)
+  ![](img/jupyter.png)
 
 - Install
 
@@ -99,7 +99,7 @@ conda install tensorflow-gpu=2.1.0
 
 3. Create new notebook
 
-   ![](C:/Users/liyuan/Documents/Personal/DeepLearning/img/newnotebook.png)
+   ![](img/newnotebook.png)
 
 4. Coding
 
@@ -107,11 +107,11 @@ conda install tensorflow-gpu=2.1.0
 
 5. Import Tensorflow/Kares
 
-   ![](C:/Users/liyuan/Documents/Personal/DeepLearning/img/runcode.png)
+   ![](img/runcode.png)
 
 6. New Code Block
 
-   ![](C:/Users/liyuan/Documents/Personal/DeepLearning/img/newcodeblock.png)
+   ![](img/newcodeblock.png)
 
 7. Model Print/Save
 
@@ -125,7 +125,7 @@ conda install tensorflow-gpu=2.1.0
 
 ## 
 
-![](C:/Users/liyuan/Documents/Personal/DeepLearning/img/vgg16.png)
+![](img/vgg16.png)
 
 - Build-in Loss: https://keras.io/api/losses/
 - Build-in Optimizers: https://keras.io/api/optimizers/
